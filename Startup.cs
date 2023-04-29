@@ -4,10 +4,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Solution.Data;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using System;
+using Solution.Interfaces;
+using Solution.Repositories;
+using Solution.Datas.Contexts;
 
 namespace Solution
 {
@@ -23,7 +25,7 @@ namespace Solution
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CommandContext>(option => option.UseNpgsql(
+            services.AddDbContext<ApplicationDbContext>(option => option.UseNpgsql(
                 Configuration.GetConnectionString("DefaultConnection")
             ));
 
@@ -36,6 +38,8 @@ namespace Solution
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddScoped<ICommandApiRepo, SqlCommandApiRepo>();
+
+            services.AddScoped<IUserApiRepo, SqlUserApiRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

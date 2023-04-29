@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Solution.Models;
+using Solution.Datas.SavingDatasAsync;
 
-namespace Solution.Data
+namespace Solution.Interfaces
 {
-    public interface ICommandApiRepo
+    public interface ICommandApiRepo : ISaveChangesAsync
     {
         Task<IEnumerable<Command>> GetAllCommands();
 
@@ -15,7 +16,5 @@ namespace Solution.Data
         Task UpdateCommand(Command command);
 
         void DeleteCommand(Command command);
-
-        public Task<bool> SaveChangesAsync();
     }
 }

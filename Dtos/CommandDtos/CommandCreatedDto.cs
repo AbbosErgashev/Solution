@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Solution.Dtos
+namespace Solution.Dtos.CommandDtos
 {
     public class CommandCreatedDto
     {

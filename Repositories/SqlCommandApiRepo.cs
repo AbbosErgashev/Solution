@@ -2,16 +2,17 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Solution.Models;
 using System;
-using Solution.Data;
 using Microsoft.EntityFrameworkCore;
+using Solution.Interfaces;
+using Solution.Datas.Contexts;
 
-namespace Solution.Data
+namespace Solution.Repositories
 {
     public class SqlCommandApiRepo : ICommandApiRepo
     {
-        private readonly CommandContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public SqlCommandApiRepo(CommandContext context)
+        public SqlCommandApiRepo(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -46,9 +47,9 @@ namespace Solution.Data
             return await _context.Commands.FirstOrDefaultAsync(command => command.Id == id);
         }
 
-        public Task UpdateCommand(Command command)
+        public async Task UpdateCommand(Command command)
         {
-            throw new NotImplementedException();
+            ///
         }
 
         public async Task<bool> SaveChangesAsync()

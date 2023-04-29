@@ -1,10 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Solution.Data;
-using Solution.Dtos;
+using Solution.Dtos.CommandDtos;
+using Solution.Interfaces;
 using Solution.Models;
 
 namespace Solution.Controllers

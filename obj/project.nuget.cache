@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xq/N2qikYJcL596N0AY2wEy5EmO2f8BQC78A6lQJKiMnRb/rsWzemcZ30sMdN3EMVP2Fy7tgx3uChFyCAUGC3w==",
+  "dgSpecHash": "c2SoWn6yPAT0ATlb8Csrtl7Cxw0HzMVTkvXyWx3hk65Tm36ynhIC/xXvVyfBRDcAb5uljUwemoql3o7f1PRbSQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\eaxus\\OneDrive\\Desktop\\Solution\\Solution.csproj",
+  "projectFilePath": "C:\\Users\\eaxus\\OneDrive\\Desktop\\Projects\\Solution\\Solution.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eaxus\\.nuget\\packages\\automapper\\7.0.1\\automapper.7.0.1.nupkg.sha512",
     "C:\\Users\\eaxus\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\5.0.0\\automapper.extensions.microsoft.dependencyinjection.5.0.0.nupkg.sha512",

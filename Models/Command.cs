@@ -2,10 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Solution.Models
 {
-    public class Command
+    public class Command : Base
     {
-        public int Id { get; set; }
-
         [Required]
         [MaxLength(250)]
         public string HowTo { get; set; }

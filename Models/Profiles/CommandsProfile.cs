@@ -1,5 +1,5 @@
 using AutoMapper;
-using Solution.Dtos;
+using Solution.Dtos.CommandDtos;
 
 namespace Solution.Models.Profiles
 {
